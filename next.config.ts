@@ -4,6 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    unoptimized: true, // Disable image optimization
     domains: ['ceo.pronexus.in'],
     remotePatterns: [
       {
