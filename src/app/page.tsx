@@ -5,6 +5,8 @@ import TechnologiesSection from '@/components/sections/TechnologiesSection'
 import ContactSection from '@/components/sections/ContactSection'
 import Footer from '@/components/sections/Footer'
 
+export const runtime = "edge";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
