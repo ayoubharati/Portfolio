@@ -4,7 +4,11 @@ import { useRef, useEffect, useState } from "react";
 import { Github, ArrowRight } from "lucide-react";
 
 // ========== Inline ProjectCard (you can import your existing version instead) ==========
-function ProjectCard({ project }: { project: typeof projects[0] }) {
+function ProjectCard({
+  project,
+}: {
+  project: typeof projects[0] & { github?: string };
+}) {
   return (
     <div
       className="flex-shrink-0 w-[360px] rounded-xl border border-white/10 overflow-hidden transition-all hover:border-white/20 hover:shadow-2xl group"
@@ -86,55 +90,122 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
 const projects = [
   {
     id: 1,
-    title: "Online Booking Platform - Next.js",
-    date: "Jan 2024 - Now",
+    title: "PharmaChain - Blockchain-based Medicine Traceability",
+    date: "Feb 2024 - Now",
     description:
-      "A comprehensive online booking platform for accommodation and travel services with responsive design, booking templates, and interactive UI. Built with Next.js, React, and Google Maps.",
+      "A full-stack blockchain and IoT platform ensuring secure traceability of pharmaceutical products. It integrates smart contracts, IPFS, and AI verification to monitor and validate medicine quality throughout the supply chain.",
     techStack: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "HeadlessUI",
-      "Google Maps",
+      "React.js",
+      "React Native",
+      "Solidity",
+      "Ethereum",
+      "IPFS",
+      "Node-RED",
+      "Python",
+      "AI/ML",
     ],
-    link: "https://example.com",
-    thumbnail: "/assets/online-booking/1.png",
+    link: "https://github.com/ayoubharati/medProject",
+    thumbnail: "/assets/pharmachain_cover.png",
   },
   {
     id: 2,
-    title: "ByteCrew - NammaSuraksha (AI Scam Detection System)",
-    date: "Recent",
+    title: "MarkerGo – Mobile Marketplace App",
+    date: "Mar 2024 - Now",
     description:
-      "AI-powered scam and phishing detection system using OpenAI GPT-4 with integrations for web, mobile, and browser extensions.",
+      "A modern cross-platform mobile application built with Expo & React Native for discovering and managing local market listings. Includes geolocation, image uploads, native device support (iOS/Android/Web), and state management with Zustand.",
     techStack: [
-      "Next.js",
       "React Native",
-      "Express.js",
-      "PostgreSQL",
-      "OpenAI",
-      "TensorFlow",
+      "Expo",
+      "TypeScript",
+      "NativeWind (Tailwind for React Native)",
+      "Zustand",
+      "Expo Router",
+      "GeoLocation APIs",
+      "Async Storage"
     ],
-    github: "https://github.com/example",
-  },
+    link: "https://github.com/abdellah-elgharbi/MarkerGo",
+    thumbnail: "/assets/market_cover.png",
+  },  
   {
     id: 3,
-    title: "E-Commerce Dashboard",
-    date: "Nov 2023",
+    title: "Paraphrase FR – French Paraphrase Detection Benchmark",
+    date: "Apr 2024 – Now",
     description:
-      "A modern admin dashboard with real-time analytics, inventory management, and order tracking. Features responsive design and beautiful charts.",
-    techStack: ["React", "Node.js", "MongoDB", "Chart.js", "Stripe"],
-    github: "https://github.com/example",
+      "A research-driven NLP project focused on French paraphrase detection using the PAWS-X dataset. It benchmarks multiple approaches — from TF-IDF baselines to fine-tuned CamemBERT and hybrid models — and provides an interactive Streamlit app for real-time paraphrase analysis.",
+    techStack: [
+      "Python",
+      "Transformers (CamemBERT)",
+      "Sentence Transformers",
+      "Scikit-learn",
+      "Streamlit",
+      "PyTorch",
+      "NLTK / spaCy",
+      "Matplotlib / Seaborn"
+    ],
+    link: "https://github.com/ayoubharati/paraphrase_fr",
+    thumbnail: "/assets/paraphrase_fr_cover.png",
   },
   {
     id: 4,
-    title: "Social Media Analytics Platform",
-    date: "Sep 2023",
-    description:
-      "Advanced analytics platform for social media metrics with AI-powered insights and automated reporting across multiple platforms.",
-    techStack: ["Vue.js", "Python", "FastAPI", "Redis", "Docker"],
-    link: "https://example.com",
+    title: "SqlRag - AI-Powered Data Warehouse Chatbot",
+    date: "Aug 2024 - Present",
+    description: "A full-stack AI-powered data warehouse chatbot that transforms natural language queries into SQL queries through a sophisticated 7-step workflow. Features React frontend with real-time chat interface, Flask backend with Google Gemini AI integration, FAISS vector search, and automated chart generation for data visualization.",
+    techStack: [
+      "React.js",
+      "Tailwind CSS",
+      "Vite",
+      "Flask",
+      "Python",
+      "Google Gemini AI",
+      "FAISS",
+      "PostgreSQL",
+      "Chart.js",
+      "Plotly.js",
+      "SQLAlchemy",
+      "Pandas",
+      "Node.js"
+    ],
+    link: "https://github.com/ayoubharati/dataware_chatbot",
+    thumbnail: "/assets/sqlrag_cover.png"
   },
+  {
+    id: 5,
+    title: "ExamSessionManager – Web App for Exam Supervision",
+    date: "Mar 2024 - Jun 2024",
+    description:
+      "A full-stack web application for managing and automating exam supervision within universities. It streamlines scheduling, teacher assignments, and session monitoring with a secure interface and real-time updates.",
+    techStack: [
+      "React.js",
+      "Spring Boot",
+      "Spring Security",
+      "Hibernate (JPA)",
+      "MySQL",
+      "Tailwind CSS",
+      "Chart.js",
+      "Lucide-React",
+    ],
+    link: "https://github.com/YounesAO/ExamSessionManger",
+    thumbnail: "/assets/examsessionmanager_cover.png",
+  },
+  {
+    id: 6,
+    title: "Smart Rehab – Intelligent Rehabilitation Platform",
+    date: "Dec 2024 – Now",
+    description:
+      "A smart rehabilitation platform that leverages real-time pose detection and motion analysis to assist patients and therapists in monitoring and improving physical recovery. Integrates AI-based movement tracking with web and mobile interfaces to provide actionable feedback and prevent improper exercises.",
+    techStack: [
+      "Vite.js",
+      "Spring Boot",
+      "MySQL",
+      "Tailwind CSS",
+      "Java (Android)",
+      "Docker",
+      "REST API",
+      "Pose Detection / Computer Vision"
+    ],
+    link: "https://github.com/Ballouk12/SmartRehab",
+    thumbnail: "/assets/smartrehab_cover.png",
+  }
 ];
 
 // ========== Projects Section ==========
