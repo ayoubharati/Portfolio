@@ -71,14 +71,16 @@ export default function AboutSection() {
           </p>
           
           {/* Download CV Button */}
-          <button 
-            className="px-6 py-2 border border-white/20 rounded-md text-white/90 text-sm hover:bg-white/10 transition mb-8"
+          <a
+            href="/assets/Ayoub_Harati_CV.pdf"
+            download
+            className="inline-flex items-center justify-center px-6 py-2 border border-white/20 rounded-md text-white/90 text-sm hover:bg-white/10 transition mb-8"
             style={{
               background: 'rgba(255,255,255,0.05)'
             }}
           >
             Download CV
-          </button>
+          </a>
           
           
         </div>
